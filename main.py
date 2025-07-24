@@ -27,7 +27,7 @@ st.markdown(
         left: 0;
         right: 0;
         margin: 0 auto;
-        width: 50%;
+        width: 80%;
         background: #F9F3EF;
         padding: 5px 0;
         box-shadow: 0 2px 4px rgba(0,0,0,0.04);
