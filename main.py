@@ -17,7 +17,7 @@ headers = {
 
 st.set_page_config(page_title="Digitor for Korpa", layout="wide")
 
-# Add a fixed header that stays visible when scrolling, with black background
+# Create a fixed header using Streamlit's custom CSS
 st.markdown(
     """
     <style>
@@ -25,30 +25,29 @@ st.markdown(
         position: fixed;
         top: 0;
         left: 0;
-        width: 100vw;
-        z-index: 1000;
-        background-color: ; /* Black background */
-        padding: 20px;
-        border-radius: 0 0 10px 10px;
-        margin-bottom: 20px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        right: 0;
+        margin: 0 auto;
+        width: 50%;
+        background: #F9F3EF;
+        padding: 5px 0;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+        border-radius: 20px;
     }
-    .fixed-header h2, .fixed-header p {
-        color: #FFFFFF;
-    }
-    .stApp {
-        padding-top: 90px;
-        background-color: #000000 !important;
+    .block-container {
+        padding-top: 70px !important;
     }
     </style>
-    <div class='fixed-header'>
+    <div class="fixed-header">
+    
+    <h5 style='text-align: center;'></h5>
+
+    <h1 style='text-align: center; color: #4A4A4A;'> BMRI AI DIGITOR for<img src="https://i.ibb.co/vCcX0bwr/kopra.png" style="height: 60px; margin-left: 10px;"></h1>
     </div>
     """,
     unsafe_allow_html=True
 )
 
-st.markdown("<h1 style='text-align: center;'>BMRI AI DIGITOR for Korpa</h1>", unsafe_allow_html=True)
-
+st.markdown("<h2 style='text-align: center;'></h2>", unsafe_allow_html=True)
 chat_history = []
 if "messages" not in st.session_state:
     st.session_state.messages = [] 
